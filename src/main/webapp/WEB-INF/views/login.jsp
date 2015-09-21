@@ -58,7 +58,7 @@
 			<table>
 				<tr>
 					<td>User:</td>
-					<td><input type='text' name='username'></td>
+					<td><input ng-model="mensaje" type='text' name='username'></td>
 				</tr>
 				<tr>
 					<td>Password:</td>
@@ -66,7 +66,7 @@
 				</tr>
 				<tr>
 					<td colspan='2'><input name="submit" type="submit"
-						value="submit" /></td>
+						value="submit" ng-click="cambiarMensaje()" /></td>
 				</tr>
 			</table>
 
