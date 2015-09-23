@@ -44,9 +44,9 @@ public class UsuarioServiceImpl implements UserDetailsService, UsuarioService {
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		try{	
 		com.geo.project.common.model.PyrUsuario user = usuarioRepository.findByUserName(username);
-		System.out.println("usuario spring : " + user.toString());
+		System.out.println("usuario spring : " + user);
 		List<GrantedAuthority> authorities = buildUserAuthority(user.getRoles()); 
-		System.out.println("roles: " + user.getRoles());
+		System.out.println("roles: " + user);
 		return buildUserForAuthentication(user, authorities);
 		}catch(Exception e)
 		{e.printStackTrace();return null;}
@@ -155,7 +155,7 @@ public class UsuarioServiceImpl implements UserDetailsService, UsuarioService {
 	/**
 	 * Envia mensaje de prueba al cliente con registration_id
 	 * @param registration_id
-	 * @return si lo envió o no.
+	 * @return si lo enviï¿½ o no.
 	 */
 	public static boolean enviarMensajePrueba(String registration_id) {		
 		String GCM_URL = "https://android.googleapis.com/gcm/send";

@@ -35,7 +35,7 @@
 }
 </style>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
-<script src='<c:url value="resources/js/script.js" />'></script>
+<script src="resources/js/script.js"></script>
 </head>
 <body ng-controller="PruebaController" onload='document.loginForm.username.focus();'>
 
@@ -58,7 +58,7 @@
 			<table>
 				<tr>
 					<td>User:</td>
-					<td><input ng-model="mensaje" type='text' name='username'></td>
+					<td><input ng-model="username" type='text' name='username'></td>
 				</tr>
 				<tr>
 					<td>Password:</td>

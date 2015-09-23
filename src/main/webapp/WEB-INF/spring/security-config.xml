@@ -29,7 +29,7 @@
 			<security:intercept-url pattern="/ws/**" access="permitAll" />						
 		<security:logout logout-success-url="/login?logout"  logout-url="/j_spring_security_logout" />
 		<!-- enable csrf protection -->
-		<security:csrf />			
+		<!--security:csrf /-->			
 	</security:http>
 	
 	<security:authentication-manager>

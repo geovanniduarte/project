@@ -22,10 +22,10 @@ public class UsuarioRepositoryImpl implements UsuarioRepository {
 	@Transactional
 	public PyrUsuario findByUserName(String usuanomb) {
 		List<PyrUsuario> users = new ArrayList<PyrUsuario>();
-		 
+		System.out.println("usuario: " + usuanomb);
 		users = getSession()
-			.createQuery("from PyrUsuario where usuanomb=?")
-			.setParameter(0, usuanomb).list();
+			.createQuery("from PyrUsuario where usuanomb = :usua")
+			.setParameter("usua", usuanomb).list();
  
 		if (users.size() > 0) {
 			return users.get(0);
