@@ -141,6 +141,18 @@ System.out.println("entre al principio");
 
 	}
 	
+	@RequestMapping("/modulos/modulo1.html")
+	public String modulo1() {
+		return "modulos/modulo1";
+	}
 	
+	@RequestMapping("/modulos/modulo2.html")
+	public String modulo2() {
+		return "modulos/modulo2";
+	}
 	
+	@RequestMapping("/modulos/modulo3.html")
+	public String modulo3() {
+		return "modulos/modulo3";
+	}
 }
