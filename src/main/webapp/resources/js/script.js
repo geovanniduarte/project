@@ -5,6 +5,14 @@ var app=angular.module("app", ['ngRoute']);
  
 function PruebaController($scope) {
   $scope.mensaje="Index";
+  $scope.cliente = {
+				  	nit:"",
+				    nombre:"",
+				    direccion:"",
+				    cuidad:undefined,
+				    actividad:"",
+				    fechaCreacion:new Date()
+  					}
   $scope.cambiarMensaje = function() {
 		$scope.username = mensaje;		
   }
