@@ -1,6 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page session="true"%>
-<html ng-app>
+<html ng-app="app">
 <head>
 <title>Login Page</title>
 <style>
@@ -37,7 +37,7 @@
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
 <script src="resources/js/script.js"></script>
 </head>
-<body ng-controller="PruebaController" onload='document.loginForm.username.focus();'>
+<body ng-controller="LoginController" onload='document.loginForm.username.focus();'>
 
 	<h1>{{mensaje}}</h1>
 

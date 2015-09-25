@@ -10,7 +10,8 @@
   <!-- SPELLS -->
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
-  <script src="resources/js/script.js"></script>
+  <script src="resources/js/menu/MenuApp.js"></script>
+  <script src="resources/js/menu/MenuController.js"></script>
 </head>
 
 <!-- define angular controller -->
