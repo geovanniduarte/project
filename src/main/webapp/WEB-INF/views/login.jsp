@@ -58,7 +58,7 @@
 			<table>
 				<tr>
 					<td>User:</td>
-					<td><input ng-model="username" type='text' name='username'></td>
+					<td><input ng-model="usuario.username" type='text' name='username'></td>
 				</tr>
 				<tr>
 					<td>Password:</td>

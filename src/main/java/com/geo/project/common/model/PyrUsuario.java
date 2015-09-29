@@ -14,9 +14,11 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.TableGenerator;
 
+import com.geo.project.common.Identificable;
+
 @Entity
 @Table(name="pyr_usuario")
-public class PyrUsuario {
+public class PyrUsuario implements Identificable<Long> {
 	
 	@TableGenerator(name = "PYR_USUA_GEN", 
 			table = "pyr_pkid", 
@@ -112,6 +114,11 @@ public class PyrUsuario {
 	public String toString() {
 		return "PyrUsuario [usuaid=" + usuaid + ", usuanomb=" + usuanomb
 				+ ", usuapass=" + usuapass + ", usuahabi=" + usuahabi + "]";
+	}
+
+	@Override
+	public Long getIdentifier() {		
+		return this.usuaid;
 	}
 	
 	

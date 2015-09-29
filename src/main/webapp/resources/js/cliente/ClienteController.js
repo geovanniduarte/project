@@ -1,7 +1,7 @@
 /**
  * 
  */
-app.controller('clienteController', function ($scope) {
+app.controller('clienteController', function ($scope, $log) {
 	 $scope.cliente = {
 			  	nit:"",
 			    nombre:"",
@@ -10,5 +10,6 @@ app.controller('clienteController', function ($scope) {
 			    actividad:"",
 			    fechaCreacion: new Date()
 				}
+	 $log.debug("Acabamos de crear el $scope");
 });
  

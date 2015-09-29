@@ -9,13 +9,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.geo.project.common.EntityRepositoryImpl;
 import com.geo.project.common.model.PyrUsuario;
 
 @Repository
-public class UsuarioRepositoryImpl implements UsuarioRepository {
-
-	@Autowired
-	private SessionFactory sessionFactory;
+public class UsuarioRepositoryImpl extends EntityRepositoryImpl<PyrUsuario> implements UsuarioRepository {	
 	
 	@SuppressWarnings("unchecked")
 	@Override
@@ -32,62 +30,6 @@ public class UsuarioRepositoryImpl implements UsuarioRepository {
 		} else {
 			return null;
 		}
-	}
-
-	public Session getSession() {
-		return this.sessionFactory.getCurrentSession();
-	}
-
-	public void setSessionFactory(SessionFactory sessionFactory) {
-		this.sessionFactory = sessionFactory;
-	}
-
-	@Override
-	@Transactional
-	public Long insert(PyrUsuario PyrUsuario) {
-		return (Long) getSession().save(PyrUsuario);	
-	}
-	
-	@Override
-	@Transactional
-	public Long insertUpdate(PyrUsuario PyrUsuario) {
-		getSession().saveOrUpdate(PyrUsuario);
-		return PyrUsuario.getUsuaid();
-	}
-
-	@Override
-	public void update(PyrUsuario PyrUsuario) {
-		getSession().update(PyrUsuario);
-	}
-
-	@Override
-	public void delete(PyrUsuario PyrUsuario) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public Long count() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public List<PyrUsuario> findAll() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public List<PyrUsuario> find(PyrUsuario PyrUsuario) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public PyrUsuario findById(Long usuaid) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	}		
 	
 }

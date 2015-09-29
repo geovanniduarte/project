@@ -47,7 +47,15 @@ public class PreguntaTest {
 		assertNotSame(Long.valueOf(0),resp);
 	}
 	
-	@Test
+		@Test
+		public void getUsuario() {
+			System.out.println( "Creando usuario" );
+			PyrUsuario obtenido = usuarioService.findById(1L);	
+			System.out.println( "obteniendo usuario" + obtenido );
+			assertEquals(Long.valueOf(1),obtenido.getIdentifier());
+		}
+	
+	//@Test
 	public void enviarMensaje() {
 		boolean enviado = usuarioService.enviarMensajePruebaUsuario("geovannk");
 		assert(enviado);

@@ -123,8 +123,7 @@ public class UsuarioServiceImpl implements UserDetailsService, UsuarioService {
 
 	@Override
 	public PyrUsuario findById(Long usuaid) {
-		// TODO Auto-generated method stub
-		return null;
+		return usuarioRepository.findById(usuaid);
 	}
 
 
