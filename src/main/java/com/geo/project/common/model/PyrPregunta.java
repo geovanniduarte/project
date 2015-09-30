@@ -8,10 +8,12 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.TableGenerator;
 
+import com.geo.project.common.Identificable;
+
 
 @Entity
 @Table(name="pyr_pregunta")
-public class PyrPregunta {
+public class PyrPregunta implements Identificable<Long> {
 	
 	@TableGenerator(name = "PYR_PREGUNTA_GEN", 
 			table = "pyr_pkid", 
@@ -62,6 +64,12 @@ public class PyrPregunta {
 	public String toString() {
 		return "pregid=" + pregid + ", pregtext=" + pregtext
 				+ ", pregusua=" + pregusua ;
+	}
+
+
+	@Override
+	public Long getIdentifier() {
+		return this.getPregid();
 	}
 	
 	

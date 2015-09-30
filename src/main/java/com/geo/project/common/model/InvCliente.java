@@ -8,9 +8,11 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.TableGenerator;
 
+import com.geo.project.common.Identificable;
+
 @Entity
 @Table(name="inv_cliente")
-public class InvCliente {
+public class InvCliente implements Identificable<Long> {
 	
 	@TableGenerator(name = "INV_CLIE_GEN", 
 			table = "pyr_pkid", 
@@ -85,6 +87,11 @@ public class InvCliente {
 
 	public void setClieacti(int clieacti) {
 		this.clieacti = clieacti;
+	}
+
+	@Override
+	public Long getIdentifier() {
+		return this.getClieid();
 	}
 	
 }

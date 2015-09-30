@@ -26,7 +26,7 @@ public class PreguntaTest {
 	private UsuarioService usuarioService;
 	private static final String BASE_URL = "http://localhost:8080/pyr/ws";
 	private RestTemplate restTemplate = new RestTemplate();
-	//@Test
+	@Test
 	public void crearPregunta() {		
 		String url = BASE_URL + "/preguntas";
 		PyrPregunta pregunta = new PyrPregunta(1,"que edad tienes?");
@@ -47,13 +47,13 @@ public class PreguntaTest {
 		assertNotSame(Long.valueOf(0),resp);
 	}
 	
-		@Test
-		public void getUsuario() {
-			System.out.println( "Creando usuario" );
-			PyrUsuario obtenido = usuarioService.findById(1L);	
-			System.out.println( "obteniendo usuario" + obtenido );
-			assertEquals(Long.valueOf(1),obtenido.getIdentifier());
-		}
+	//@Test
+	public void getUsuario() {
+		System.out.println( "Creando usuario" );
+		PyrUsuario obtenido = usuarioService.findById(1L);	
+		System.out.println( "obteniendo usuario" + obtenido );
+		assertEquals(Long.valueOf(1),obtenido.getIdentifier());
+	}
 	
 	//@Test
 	public void enviarMensaje() {
