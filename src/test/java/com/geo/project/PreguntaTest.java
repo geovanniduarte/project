@@ -24,19 +24,20 @@ public class PreguntaTest {
 	
 	@Autowired
 	private UsuarioService usuarioService;
-	private static final String BASE_URL = "http://localhost:8080/pyr/ws";
+	private static final String BASE_URL = "http://localhost:8080/pyr/clientes";
 	private RestTemplate restTemplate = new RestTemplate();
 	@Test
 	public void crearPregunta() {		
-		String url = BASE_URL + "/preguntas";
+		String url = BASE_URL + "/create";
 		PyrPregunta pregunta = new PyrPregunta(1,"que edad tienes?");
 		URI newPreguntaLocation = restTemplate.postForLocation(url, pregunta);
-		System.out.println("URL GEO: " + newPreguntaLocation );
+		System.out.println("URL GEO: " + newPreguntaLocation);
 		/*
 		PyrPregunta newPregunta = new PyrPregunta(1, "Que es el arte?");
 		Long resp = preguntaService.insert(newPregunta);		
 		assertNotSame(Long.valueOf(0),resp);
-		*/		
+		*/
+		assertEquals(Long.valueOf(1), Long.valueOf(newPreguntaLocation.toString()));
 	}
 	
 	//@Test

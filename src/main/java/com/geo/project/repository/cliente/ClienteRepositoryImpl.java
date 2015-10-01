@@ -7,7 +7,7 @@ import com.geo.project.common.EntityRepositoryImpl;
 import com.geo.project.common.model.InvCliente;
 
 @Repository
-public class ClienteRepositoryImpl extends EntityRepositoryImpl<InvCliente> implements ClienteRespository {
+public class ClienteRepositoryImpl extends EntityRepositoryImpl<InvCliente> implements ClienteRepository {
 	
 	@Autowired
 	private SessionFactory sessionFactory;	
