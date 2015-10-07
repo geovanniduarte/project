@@ -1,5 +1,7 @@
 package com.geo.project.common.model;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -40,6 +42,9 @@ public class InvCliente implements Identificable<Long> {
 	
 	@Column(name="clieacti")
 	private int clieacti;
+	
+	@Column(name="cliefecr")
+	private Date cliefecr;
 
 	public long getClieid() {
 		return clieid;

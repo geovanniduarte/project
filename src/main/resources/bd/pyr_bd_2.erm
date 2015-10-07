@@ -12,7 +12,7 @@
 	<category_index>0</category_index>
 	<zoom>1.0</zoom>
 	<x>-12</x>
-	<y>60</y>
+	<y>63</y>
 	<default_color>
 		<r>128</r>
 		<g>128</g>
@@ -135,7 +135,7 @@
 			</connections>
 			<display>false</display>
 			<creation_date>2015-03-23 17:01:43</creation_date>
-			<updated_date>2015-09-28 22:25:18</updated_date>
+			<updated_date>2015-10-07 16:03:11</updated_date>
 			<model_property>
 				<name>Project Name</name>
 				<value></value>
@@ -179,6 +179,7 @@
 			<zerofill>false</zerofill>
 			<binary>false</binary>
 			<args></args>
+			<char_semantics>false</char_semantics>
 			<description>actividad comercial</description>
 			<logical_name>clieacti</logical_name>
 			<physical_name>clieacti</physical_name>
@@ -194,6 +195,7 @@
 			<zerofill>false</zerofill>
 			<binary>false</binary>
 			<args></args>
+			<char_semantics>false</char_semantics>
 			<description>ciudad del cliente</description>
 			<logical_name>clieciud</logical_name>
 			<physical_name>clieciud</physical_name>
@@ -209,6 +211,7 @@
 			<zerofill>false</zerofill>
 			<binary>false</binary>
 			<args></args>
+			<char_semantics>false</char_semantics>
 			<description></description>
 			<logical_name>cliedire</logical_name>
 			<physical_name>cliedire</physical_name>
@@ -224,10 +227,11 @@
 			<zerofill>false</zerofill>
 			<binary>false</binary>
 			<args></args>
+			<char_semantics>false</char_semantics>
 			<description></description>
-			<logical_name>clieid</logical_name>
-			<physical_name>clieid</physical_name>
-			<type>numeric</type>
+			<logical_name>cliefecr</logical_name>
+			<physical_name>cliefecr</physical_name>
+			<type>date</type>
 		</word>
 		<word>
 			<id>4</id>
@@ -239,10 +243,11 @@
 			<zerofill>false</zerofill>
 			<binary>false</binary>
 			<args></args>
+			<char_semantics>false</char_semantics>
 			<description></description>
-			<logical_name>clienit</logical_name>
-			<physical_name>clienit</physical_name>
-			<type>varchar</type>
+			<logical_name>clieid</logical_name>
+			<physical_name>clieid</physical_name>
+			<type>numeric</type>
 		</word>
 		<word>
 			<id>5</id>
@@ -254,9 +259,10 @@
 			<zerofill>false</zerofill>
 			<binary>false</binary>
 			<args></args>
-			<description>&#x0D;&#x0A;</description>
-			<logical_name>clienomb</logical_name>
-			<physical_name>clienomb</physical_name>
+			<char_semantics>false</char_semantics>
+			<description></description>
+			<logical_name>clienit</logical_name>
+			<physical_name>clienit</physical_name>
 			<type>varchar</type>
 		</word>
 		<word>
@@ -269,28 +275,14 @@
 			<zerofill>false</zerofill>
 			<binary>false</binary>
 			<args></args>
-			<description></description>
-			<logical_name>pkidcons</logical_name>
-			<physical_name>pkidcons</physical_name>
-			<type>integer</type>
+			<char_semantics>false</char_semantics>
+			<description>&#x0D;&#x0A;</description>
+			<logical_name>clienomb</logical_name>
+			<physical_name>clienomb</physical_name>
+			<type>varchar</type>
 		</word>
 		<word>
 			<id>7</id>
-			<length>50</length>
-			<decimal>null</decimal>
-			<array>false</array>
-			<array_dimension>null</array_dimension>
-			<unsigned>false</unsigned>
-			<zerofill>false</zerofill>
-			<binary>false</binary>
-			<args></args>
-			<description></description>
-			<logical_name>pkidnomb</logical_name>
-			<physical_name>pkidnomb</physical_name>
-			<type>varchar(n)</type>
-		</word>
-		<word>
-			<id>8</id>
 			<length>null</length>
 			<decimal>null</decimal>
 			<array>false</array>
@@ -299,10 +291,27 @@
 			<zerofill>false</zerofill>
 			<binary>false</binary>
 			<args></args>
+			<char_semantics>false</char_semantics>
 			<description></description>
-			<logical_name>pkidvalu</logical_name>
-			<physical_name>pkidvalu</physical_name>
+			<logical_name>pkidcons</logical_name>
+			<physical_name>pkidcons</physical_name>
 			<type>integer</type>
+		</word>
+		<word>
+			<id>8</id>
+			<length>50</length>
+			<decimal>null</decimal>
+			<array>false</array>
+			<array_dimension>null</array_dimension>
+			<unsigned>false</unsigned>
+			<zerofill>false</zerofill>
+			<binary>false</binary>
+			<args></args>
+			<char_semantics>false</char_semantics>
+			<description></description>
+			<logical_name>pkidnomb</logical_name>
+			<physical_name>pkidnomb</physical_name>
+			<type>varchar(n)</type>
 		</word>
 		<word>
 			<id>9</id>
@@ -314,9 +323,10 @@
 			<zerofill>false</zerofill>
 			<binary>false</binary>
 			<args></args>
-			<description>Id de la pregunta hecha por el usuario&#x0D;&#x0A;</description>
-			<logical_name>pregid</logical_name>
-			<physical_name>pregid</physical_name>
+			<char_semantics>false</char_semantics>
+			<description></description>
+			<logical_name>pkidvalu</logical_name>
+			<physical_name>pkidvalu</physical_name>
 			<type>integer</type>
 		</word>
 		<word>
@@ -329,10 +339,11 @@
 			<zerofill>false</zerofill>
 			<binary>false</binary>
 			<args></args>
-			<description>Texto con la pregunta</description>
-			<logical_name>pregtext</logical_name>
-			<physical_name>pregtext</physical_name>
-			<type>varchar</type>
+			<char_semantics>false</char_semantics>
+			<description>Id de la pregunta hecha por el usuario&#x0D;&#x0A;</description>
+			<logical_name>pregid</logical_name>
+			<physical_name>pregid</physical_name>
+			<type>integer</type>
 		</word>
 		<word>
 			<id>11</id>
@@ -344,28 +355,14 @@
 			<zerofill>false</zerofill>
 			<binary>false</binary>
 			<args></args>
-			<description></description>
-			<logical_name>usroid</logical_name>
-			<physical_name>usroid</physical_name>
-			<type>integer</type>
+			<char_semantics>false</char_semantics>
+			<description>Texto con la pregunta</description>
+			<logical_name>pregtext</logical_name>
+			<physical_name>pregtext</physical_name>
+			<type>varchar</type>
 		</word>
 		<word>
 			<id>12</id>
-			<length>50</length>
-			<decimal>null</decimal>
-			<array>false</array>
-			<array_dimension>null</array_dimension>
-			<unsigned>false</unsigned>
-			<zerofill>false</zerofill>
-			<binary>false</binary>
-			<args></args>
-			<description></description>
-			<logical_name>usrorole</logical_name>
-			<physical_name>usrorole</physical_name>
-			<type>varchar(n)</type>
-		</word>
-		<word>
-			<id>13</id>
 			<length>null</length>
 			<decimal>null</decimal>
 			<array>false</array>
@@ -374,10 +371,27 @@
 			<zerofill>false</zerofill>
 			<binary>false</binary>
 			<args></args>
-			<description>Codigo de registro en google.</description>
-			<logical_name>usuac2dm</logical_name>
-			<physical_name>usuac2dm</physical_name>
-			<type>varchar</type>
+			<char_semantics>false</char_semantics>
+			<description></description>
+			<logical_name>usroid</logical_name>
+			<physical_name>usroid</physical_name>
+			<type>integer</type>
+		</word>
+		<word>
+			<id>13</id>
+			<length>50</length>
+			<decimal>null</decimal>
+			<array>false</array>
+			<array_dimension>null</array_dimension>
+			<unsigned>false</unsigned>
+			<zerofill>false</zerofill>
+			<binary>false</binary>
+			<args></args>
+			<char_semantics>false</char_semantics>
+			<description></description>
+			<logical_name>usrorole</logical_name>
+			<physical_name>usrorole</physical_name>
+			<type>varchar(n)</type>
 		</word>
 		<word>
 			<id>14</id>
@@ -389,10 +403,11 @@
 			<zerofill>false</zerofill>
 			<binary>false</binary>
 			<args></args>
-			<description></description>
-			<logical_name>usuahabi</logical_name>
-			<physical_name>usuahabi</physical_name>
-			<type>boolean</type>
+			<char_semantics>false</char_semantics>
+			<description>Codigo de registro en google.</description>
+			<logical_name>usuac2dm</logical_name>
+			<physical_name>usuac2dm</physical_name>
+			<type>varchar</type>
 		</word>
 		<word>
 			<id>15</id>
@@ -404,13 +419,30 @@
 			<zerofill>false</zerofill>
 			<binary>false</binary>
 			<args></args>
+			<char_semantics>false</char_semantics>
+			<description></description>
+			<logical_name>usuahabi</logical_name>
+			<physical_name>usuahabi</physical_name>
+			<type>boolean</type>
+		</word>
+		<word>
+			<id>16</id>
+			<length>null</length>
+			<decimal>null</decimal>
+			<array>false</array>
+			<array_dimension>null</array_dimension>
+			<unsigned>false</unsigned>
+			<zerofill>false</zerofill>
+			<binary>false</binary>
+			<args></args>
+			<char_semantics>false</char_semantics>
 			<description></description>
 			<logical_name>usuaid</logical_name>
 			<physical_name>usuaid</physical_name>
 			<type>integer</type>
 		</word>
 		<word>
-			<id>16</id>
+			<id>17</id>
 			<length>50</length>
 			<decimal>null</decimal>
 			<array>false</array>
@@ -419,13 +451,14 @@
 			<zerofill>false</zerofill>
 			<binary>false</binary>
 			<args></args>
+			<char_semantics>false</char_semantics>
 			<description></description>
 			<logical_name>usuanomb</logical_name>
 			<physical_name>usuanomb</physical_name>
 			<type>varchar(n)</type>
 		</word>
 		<word>
-			<id>17</id>
+			<id>18</id>
 			<length>100</length>
 			<decimal>null</decimal>
 			<array>false</array>
@@ -434,6 +467,7 @@
 			<zerofill>false</zerofill>
 			<binary>false</binary>
 			<args></args>
+			<char_semantics>false</char_semantics>
 			<description></description>
 			<logical_name>usuapass</logical_name>
 			<physical_name>usuapass</physical_name>
@@ -466,7 +500,7 @@
 			<option></option>
 			<columns>
 				<normal_column>
-					<word_id>6</word_id>
+					<word_id>7</word_id>
 					<id>0</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
@@ -499,7 +533,7 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<word_id>7</word_id>
+					<word_id>8</word_id>
 					<id>1</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
@@ -532,7 +566,7 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<word_id>8</word_id>
+					<word_id>9</word_id>
 					<id>2</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
@@ -619,7 +653,7 @@
 			<option></option>
 			<columns>
 				<normal_column>
-					<word_id>11</word_id>
+					<word_id>12</word_id>
 					<id>3</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
@@ -686,7 +720,7 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<word_id>12</word_id>
+					<word_id>13</word_id>
 					<id>5</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
@@ -790,7 +824,7 @@
 			<option></option>
 			<columns>
 				<normal_column>
-					<word_id>9</word_id>
+					<word_id>10</word_id>
 					<id>6</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
@@ -823,7 +857,7 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<word_id>10</word_id>
+					<word_id>11</word_id>
 					<id>7</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
@@ -922,7 +956,7 @@
 			<option></option>
 			<columns>
 				<normal_column>
-					<word_id>15</word_id>
+					<word_id>16</word_id>
 					<id>9</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
@@ -955,7 +989,7 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<word_id>16</word_id>
+					<word_id>17</word_id>
 					<id>10</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
@@ -988,7 +1022,7 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<word_id>17</word_id>
+					<word_id>18</word_id>
 					<id>11</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
@@ -1021,7 +1055,7 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<word_id>14</word_id>
+					<word_id>15</word_id>
 					<id>12</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
@@ -1054,7 +1088,7 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<word_id>13</word_id>
+					<word_id>14</word_id>
 					<id>13</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
@@ -1119,7 +1153,7 @@
 			<option></option>
 			<columns>
 				<normal_column>
-					<word_id>3</word_id>
+					<word_id>4</word_id>
 					<id>14</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
@@ -1152,7 +1186,7 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<word_id>4</word_id>
+					<word_id>5</word_id>
 					<id>15</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
@@ -1185,7 +1219,7 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<word_id>5</word_id>
+					<word_id>6</word_id>
 					<id>16</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
@@ -1291,6 +1325,39 @@
 					<logical_name></logical_name>
 					<physical_name></physical_name>
 					<type>numeric</type>
+					<constraint></constraint>
+					<default_value></default_value>
+					<auto_increment>false</auto_increment>
+					<foreign_key>false</foreign_key>
+					<not_null>false</not_null>
+					<primary_key>false</primary_key>
+					<unique_key>false</unique_key>
+					<character_set></character_set>
+					<collation></collation>
+					<sequence>
+						<name></name>
+						<schema></schema>
+						<increment></increment>
+						<min_value></min_value>
+						<max_value></max_value>
+						<start></start>
+						<cache></cache>
+						<nocache>false</nocache>
+						<cycle>false</cycle>
+						<order>false</order>
+						<description></description>
+						<data_type></data_type>
+						<decimal_size>0</decimal_size>
+					</sequence>
+				</normal_column>
+				<normal_column>
+					<word_id>3</word_id>
+					<id>20</id>
+					<description></description>
+					<unique_key_name></unique_key_name>
+					<logical_name></logical_name>
+					<physical_name></physical_name>
+					<type>date</type>
 					<constraint></constraint>
 					<default_value></default_value>
 					<auto_increment>false</auto_increment>

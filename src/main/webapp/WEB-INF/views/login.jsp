@@ -62,7 +62,7 @@
 				</tr>
 				<tr>
 					<td>Password:</td>
-					<td><input type='password' name='password' /></td>
+					<td><input ng-model="usuario.password" type='password' name='password' /></td>
 				</tr>
 				<tr>
 					<td colspan='2'><input name="submit" type="submit"

@@ -10,13 +10,15 @@
   <!-- SPELLS -->
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+  
   <script src="resources/js/menu/MenuApp.js"></script>
-  <script src="resources/js/menu/MenuController.js"></script>
+  <script src="resources/js/menu/MenuController.js"></script>  
+  <script src="resources/js/cliente/ClienteApp.js"></script>
+  <script src="resources/js/cliente/ClienteController.js"></script>
 </head>
 
 <!-- define angular controller -->
-<body ng-controller="mainController">
-
+<body ng-controller="clienteRouteController">
   <nav class="navbar navbar-default">
     <div class="container">
       <div class="navbar-header">

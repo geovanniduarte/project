@@ -11,7 +11,7 @@ import com.geo.project.common.model.InvCliente;
 import com.geo.project.repository.cliente.ClienteRepository;
 
 @Controller
-@RequestMapping("/clientes")
+@RequestMapping("/ws/clientes")
 public class ClienteController extends MyController {
 	
 	@Autowired
