@@ -37,12 +37,11 @@ app.controller('clienteRouteController', ['$scope', '$log', 'remoteResource', fu
 		    cliefecr: new Date()
 			}
  $scope.enviarCliente = function() {
-	 alert('enviar cliente');
 	 remoteResource.request(function(data) {
 		 $scope.message = data;
 	 },function(data, status) {
 		 $scope.message = data;
-	 });
+	 }, $scope.cliente);
  }
  $log.debug("Acabamos de crear el $scope");	
 	
