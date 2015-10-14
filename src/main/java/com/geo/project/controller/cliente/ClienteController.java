@@ -18,10 +18,10 @@ public class ClienteController extends MyController {
 	@Autowired
 	private ClienteRepository clienteRepository;	
 	
-	@RequestMapping(value = "/create", method = RequestMethod.POST)
+	@RequestMapping(value = "/create", method = RequestMethod.POST, consumes = {"application/json"})
 	@ResponseBody
 	public String insert(@RequestBody InvCliente cliente) {
-		System.out.println("CREATE");
+		System.out.println("CREATE"); 
 		long clientid = clienteRepository.insert(cliente);
 		return "" + clientid;
 	}	

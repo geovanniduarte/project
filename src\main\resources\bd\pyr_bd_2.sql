@@ -49,7 +49,7 @@ CREATE TABLE pyr_pregunta
 
 CREATE TABLE public.pyr_pkid
 (
-	pkidcons int NOT NULL,
+	pkidcons serial NOT NULL,
 	pkidnomb varchar(50),
 	pkidvalu int,
 	CONSTRAINT pyr_pkid_pkey PRIMARY KEY (pkidcons)
