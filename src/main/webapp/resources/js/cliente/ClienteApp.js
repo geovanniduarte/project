@@ -1,6 +1,7 @@
 /**
  * 
  */
+/*
 var app=angular.module("app");
 
 function RemoteResource($http,baseUrl) {
@@ -31,5 +32,14 @@ app.constant('baseUrl','http://localhost:8080/pyr/ws/clientes/create');
 app.config(['baseUrl', 'remoteResourceProvider', function(baseUrl, remoteResourceProvider) {
 	remoteResourceProvider.setBaseUrl(baseUrl);
 }]);
+*/
+var app = angular.module('cliente.service',[]);
+app.factory('cliente', function() {
+	return $resource('http://localhost:8080/pyr/ws/clientes/:clieid', {clieid: '@clieid'}, {
+		update: {
+			method: 'PUT'
+		}
+	});
+});
 
 
