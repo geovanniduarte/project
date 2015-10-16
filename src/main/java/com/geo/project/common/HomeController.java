@@ -143,6 +143,7 @@ System.out.println("entre al principio");
 	
 	@RequestMapping("/modulos/cliente.html")
 	public String modulo1() {
+		System.out.println("Cliente MODULO");
 		return "modulos/cliente";
 	}
 	

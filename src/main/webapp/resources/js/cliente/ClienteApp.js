@@ -33,13 +33,27 @@ app.config(['baseUrl', 'remoteResourceProvider', function(baseUrl, remoteResourc
 	remoteResourceProvider.setBaseUrl(baseUrl);
 }]);
 */
-var app = angular.module('cliente.service',[]);
-app.factory('cliente', function() {
-	return $resource('http://localhost:8080/pyr/ws/clientes/:clieid', {clieid: '@clieid'}, {
-		update: {
-			method: 'PUT'
-		}
-	});
+var clienteApp = angular.module('ClienteApp', ['ui.router', 'ngResource', 'clienteApp.service', 'clienteApp.controller', 'app']);
+clienteApp.config(function($stateProvider) {
+	$stateProvider.state('clientes',{
+		url: '/clientes',
+		templateUrl: 'modulos/cliente.html',
+		controller: 'ClienteListController'		
+	}).state('viewCliente', {
+		url: 'clientes/:clieid/view',
+		templateUrl: 'modulos/cliente/cliente-view.html',
+		controller: 'ClienteViewController'
+	}).state('newCliente', {
+		url: '/clientes/new',
+		templateUrl: 'modulos/cliente/cliente-add.html',
+		controller: 'ClienteCreateController',
+	}).state('editCliente', {
+		url: 'clientes/:clieid/edit',
+		templateUrl: 'modulos/cliete/cliente-edit.html',
+		controller: 'ClienteUpdateController'
+	}).run(function($state) {
+		$state.go('clientes');
+	})
 });
 
 

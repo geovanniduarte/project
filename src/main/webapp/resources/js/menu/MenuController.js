@@ -8,7 +8,7 @@ app.config(function($routeProvider) {
 		// route for the home page
 		.when('/', {
 			templateUrl : 'modulos/cliente.html',
-			controller  : 'clienteRouteController'
+			controller  : 'clienteModuleController'
 		})
 
 		// route for the about page
@@ -25,7 +25,7 @@ app.config(function($routeProvider) {
 });
 
 // create the controller and inject Angular's $scope
-app.controller('clienteRouteController', ['$scope', '$log', 'remoteResource', function($scope, $log, remoteResource) {
+app.controller('clienteModuleController', ['$scope', '$log',  function($scope, $log) {
 	// create a message to display in our view	
 	$scope.message = 'Nuevo saludo'; 
 	$scope.cliente = {
@@ -36,13 +36,7 @@ app.controller('clienteRouteController', ['$scope', '$log', 'remoteResource', fu
 		    clieacti:"",
 		    cliefecr: new Date()
 			}
- $scope.enviarCliente = function() {
-	 remoteResource.request(function(data) {
-		 $scope.message = data;
-	 },function(data, status) {
-		 $scope.message = data;
-	 }, $scope.cliente);
- }
+
  $log.debug("Acabamos de crear el $scope");	
 	
 }]);
