@@ -2,7 +2,9 @@
  * 
  */
 // configure our routes
-app.config(function($routeProvider) {
+/*
+app.config(function($stateProvider, $routeProvider) {
+
 	$routeProvider
 
 		// route for the home page
@@ -22,6 +24,7 @@ app.config(function($routeProvider) {
 			templateUrl : 'modulos/modulo3.html',
 			controller  : 'contactRouteController'
 		});
+		
 });
 
 // create the controller and inject Angular's $scope
@@ -48,3 +51,4 @@ app.controller('aboutRouteController', function($scope) {
 app.controller('contactRouteController', function($scope) {
 	$scope.message = 'Contact us! JK. This is just a demo.';
 });
+*/

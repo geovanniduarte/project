@@ -32,7 +32,7 @@ app.constant('baseUrl','http://localhost:8080/pyr/ws/clientes/create');
 app.config(['baseUrl', 'remoteResourceProvider', function(baseUrl, remoteResourceProvider) {
 	remoteResourceProvider.setBaseUrl(baseUrl);
 }]);
-*/
+
 var clienteApp = angular.module('ClienteApp', ['ui.router', 'ngResource', 'clienteApp.service', 'clienteApp.controller', 'app']);
 clienteApp.config(function($stateProvider) {
 	$stateProvider.state('clientes',{
@@ -55,5 +55,8 @@ clienteApp.config(function($stateProvider) {
 		$state.go('clientes');
 	})
 });
+
+
+*/
 
 

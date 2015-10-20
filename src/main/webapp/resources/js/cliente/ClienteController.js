@@ -62,4 +62,4 @@ clienteController.controller('ClienteUpdateController', function($scope, $state,
 	$scope.loadCliente = Cliente.get({clieid: $stateParams.clieid});
 	
 	$scope.loadCliente();
-})
+});
