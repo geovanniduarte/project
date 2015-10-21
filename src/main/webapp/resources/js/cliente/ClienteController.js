@@ -27,17 +27,15 @@ app.controller('clienteController', ['$scope','$log','remoteResource',function (
 */
 var clienteController = angular.module('ClienteApp.controller', []);
 
-clienteController.controller('ClienteListController', function($scope, $state, popupService, $window, /*factory*/ Cliente) {
+clienteController.controller('ClienteListController', ['$scope', '', '', '', function($scope, $state, $window, /*factory*/ Cliente) {
 	alert('cliente controller');
 	$scope.clientes = Cliente.query();	
-	$scope.deleteCliente = function(cliente) {
-		if (popupService.showPopup('Quiere borrar?')) {
+	$scope.deleteCliente = function(cliente) {	
 			cliente.$delete(function() {
 				$window.location.href = '';
-			});
-		}
+			});		
 	}
-});
+}]);
 
 clienteController.controller('ClienteViewController', function($socope, $stateParams, /*factory*/ Cliente) {
 	$scope.cliente = Cliente.get({clieid: $stateParams.clieid});
