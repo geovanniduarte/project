@@ -60,10 +60,9 @@ public class EntityRepositoryImpl<T extends Identificable<Long>> {
 		return null;
 	}
 
-	
-	public List<T> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+	@Transactional
+	public List<T> findAll() {		
+		return this.getSession().createQuery(FIND_ALL_HQL).list();
 	}
 
 	

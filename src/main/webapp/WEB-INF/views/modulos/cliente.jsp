@@ -18,7 +18,7 @@
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a ui-sref="clientes.viewCliente">Home</a></li>
+            <li class="active"><a ui-sref="clientes.listCliente">Home</a></li>
           </ul>
         </div>
       </div>

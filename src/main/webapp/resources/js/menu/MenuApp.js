@@ -8,6 +8,10 @@ app.config(function($stateProvider) {
 		url: '/clientes',
 		templateUrl: 'modulos/cliente.html',
 		controller: 'ClienteListController'		
+	}).state('clientes.listCliente', {
+		url: 'clientes/clientes',
+		templateUrl: 'modulos/cliente/clientes.html',
+		controller: 'ClienteListController'
 	}).state('clientes.viewCliente', {
 		url: 'clientes/:clieid/view',
 		templateUrl: 'modulos/cliente/cliente-view.html',

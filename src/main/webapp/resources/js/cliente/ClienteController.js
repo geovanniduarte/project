@@ -27,9 +27,10 @@ app.controller('clienteController', ['$scope','$log','remoteResource',function (
 */
 var clienteController = angular.module('ClienteApp.controller', []);
 
-clienteController.controller('ClienteListController', ['$scope', '', '', '', function($scope, $state, $window, /*factory*/ Cliente) {
-	alert('cliente controller');
-	$scope.clientes = Cliente.query();	
+clienteController.controller('ClienteListController', ['$scope', '$state', '$window', 'Cliente', function($scope, $state, $window, /*factory*/ Cliente) {
+	
+	$scope.clientes = Cliente.query();
+	alert('est: ' + $scope.clientes);
 	$scope.deleteCliente = function(cliente) {	
 			cliente.$delete(function() {
 				$window.location.href = '';

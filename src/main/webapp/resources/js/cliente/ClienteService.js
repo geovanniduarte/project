@@ -2,8 +2,8 @@
  * 
  */
 var clienteService = angular.module('ClienteaApp.service',[]);
-clienteService.factory('cliente', function() {
-	return $resource('http://localhost:8080/pyr/ws/clientes/:clieid', {clieid: '@clieid'}, {
+clienteService.factory('Cliente', function($resource) {
+	return $resource('http://localhost:8080/pyr/ws/clientes/clientes/:clieid', {clieid: '@clieid'}, {
 		update: {
 			method: 'PUT'
 		}

@@ -147,6 +147,12 @@ System.out.println("entre al principio");
 		return "modulos/cliente";
 	}
 	
+	@RequestMapping("/modulos/cliente/clientes.html")
+	public String clientes() {
+		System.out.println("Cliente MODULO");
+		return "modulos/cliente/clientes";
+	}
+	
 	@RequestMapping("/modulos/modulo2.html")
 	public String modulo2() {
 		return "modulos/modulo2";

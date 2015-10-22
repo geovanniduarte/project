@@ -1,5 +1,7 @@
 package com.geo.project.controller.cliente;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -26,14 +28,12 @@ public class ClienteController extends MyController {
 		return "" + clientid;
 	}	
 	
-	@RequestMapping(value = "/get", method = RequestMethod.GET)
+	@RequestMapping(value = "/clientes", method = RequestMethod.GET)
 	@ResponseBody
-	public InvCliente insert() {
-		InvCliente cliente = new InvCliente();
-		cliente.setClieacti(2);
-		cliente.setClieciud(2);
-		cliente.setCliedire("Direccion 2");
-		return cliente;
+	public List<InvCliente> insert() {	
+		List<InvCliente> clientes = clienteRepository.findAll();
+		System.out.println("get clientes " + clientes);
+		return clientes;
 	}
 	
 }
