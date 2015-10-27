@@ -9,11 +9,11 @@ app.config(function($stateProvider) {
 		templateUrl: 'modulos/cliente.html',
 		controller: 'ClienteListController'		
 	}).state('clientes.listCliente', {
-		url: 'clientes/clientes',
+		url: '/clientes/clientes',
 		templateUrl: 'modulos/cliente/clientes.html',
 		controller: 'ClienteListController'
 	}).state('clientes.viewCliente', {
-		url: 'clientes/:clieid/view',
+		url: '/clientes/:clieid/view',
 		templateUrl: 'modulos/cliente/cliente-view.html',
 		controller: 'ClienteViewController'
 	}).state('clientes.newCliente', {
@@ -21,8 +21,8 @@ app.config(function($stateProvider) {
 		templateUrl: 'modulos/cliente/cliente-add.html',
 		controller: 'ClienteCreateController',
 	}).state('clientes.editCliente', {
-		url: 'clientes/:clieid/edit',
-		templateUrl: 'modulos/cliete/cliente-edit.html',
+		url: '/clientes/:clieid/edit',
+		templateUrl: 'modulos/cliente/cliente-edit.html',
 		controller: 'ClienteUpdateController'
 	});
 });
