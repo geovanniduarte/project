@@ -162,4 +162,15 @@ System.out.println("entre al principio");
 	public String modulo3() {
 		return "modulos/modulo3";
 	}
+	
+	@RequestMapping("modulos/cliente/cliente-view.html")
+	public String cliente_view() {
+		return "modulos/cliente/cliente-view";
+	}
+	
+	@RequestMapping("modulos/cliente/cliente-edit.html")
+	public String cliente_edit() {
+		return "modulos/cliente/cliente-edit";
+	}
+	
 }

@@ -27,18 +27,19 @@ app.controller('clienteController', ['$scope','$log','remoteResource',function (
 */
 var clienteController = angular.module('ClienteApp.controller', []);
 
-clienteController.controller('ClienteListController', ['$scope', '$state', '$window', 'Cliente', function($scope, $state, $window, /*factory*/ Cliente) {
+clienteController.controller('ClienteListController', function($scope, $state, $window, $log, /*factory*/ Cliente) {
 	
 	$scope.clientes = Cliente.query();
-	alert('est: ' + $scope.clientes);
+	$log.log($scope.clientes);
 	$scope.deleteCliente = function(cliente) {	
 			cliente.$delete(function() {
 				$window.location.href = '';
 			});		
 	}
-}]);
+});
 
-clienteController.controller('ClienteViewController', function($socope, $stateParams, /*factory*/ Cliente) {
+clienteController.controller('ClienteViewController', function($scope, $stateParams, /*factory*/ Cliente) {
+	alert('view cliente');
 	$scope.cliente = Cliente.get({clieid: $stateParams.clieid});
 });
 
@@ -53,12 +54,14 @@ clienteController.controller('ClienteCreateController' , function($scope, $state
 
 clienteController.controller('ClienteUpdateController', function($scope, $state, $stateParams, /*factory*/ Cliente) {
 	$scope.updateCliente = function() {
-		Cliente.$update(function(){
+		Cliente.$update(function() {
 			$state.go('clientes');
 		});
 	}
-	
-	$scope.loadCliente = Cliente.get({clieid: $stateParams.clieid});
+	alert('update clientes');
+	$scope.loadCliente = function() { 
+		Cliente.get({clieid: $stateParams.clieid});
+	};
 	
 	$scope.loadCliente();
 });
