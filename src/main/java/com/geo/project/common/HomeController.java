@@ -170,7 +170,14 @@ System.out.println("entre al principio");
 	
 	@RequestMapping("modulos/cliente/cliente-edit.html")
 	public String cliente_edit() {
+		System.out.println("CLIENTE EDIT");
 		return "modulos/cliente/cliente-edit";
 	}
+	
+	@RequestMapping("modulos/cliente/_form.html")
+	public String cliente_form() {
+		System.out.println("CLIENTE FORM eee");
+		return "modulos/cliente/_form";
+	}	
 	
 }
