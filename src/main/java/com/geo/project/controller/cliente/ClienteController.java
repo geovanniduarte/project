@@ -45,4 +45,11 @@ public class ClienteController extends MyController {
 		return cliente;
 	}
 	
+	@RequestMapping(value = "/clientes/{clieid}", method = RequestMethod.PUT)
+	@ResponseBody
+	public Long edit(@PathVariable long clieid, @RequestBody InvCliente cliente) {	
+		Long clienid = clienteRepository.insertUpdate(cliente);
+		return clienid;
+	}
+	
 }
