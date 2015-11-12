@@ -31,7 +31,7 @@ clienteController.controller('ClienteCreateController' , function($scope, $state
 clienteController.controller('ClienteUpdateController', function($scope, $state, $stateParams, /*factory*/ Cliente) {
 	$scope.updateCliente = function() {
 		alert('update clientes update' +  Cliente);
-		Cliente.update(function() {
+		$scope.cliente.update(function() {
 			$state.go('clientes');
 		});
 	}
