@@ -141,43 +141,32 @@ System.out.println("entre al principio");
 
 	}
 	
-	@RequestMapping("/modulos/cliente.html")
+	@RequestMapping("/modulos/clientes.html")
 	public String modulo1() {
-		System.out.println("Cliente MODULO");
-		return "modulos/cliente";
+		return "modulos/clientes/clientes";
 	}
 	
-	@RequestMapping("/modulos/cliente/clientes.html")
+	@RequestMapping("/modulos/clientes/clientes.html")
 	public String clientes() {
-		System.out.println("Cliente MODULO");
-		return "modulos/cliente/clientes";
-	}
+		System.out.println("LIST CLIENTS");
+		return "modulos/clientes/cliente-list";
+	}	
 	
-	@RequestMapping("/modulos/modulo2.html")
-	public String modulo2() {
-		return "modulos/modulo2";
-	}
-	
-	@RequestMapping("/modulos/modulo3.html")
-	public String modulo3() {
-		return "modulos/modulo3";
-	}
-	
-	@RequestMapping("modulos/cliente/cliente-view.html")
+	@RequestMapping("modulos/clientes/cliente-view.html")
 	public String cliente_view() {
-		return "modulos/cliente/cliente-view";
+		return "modulos/clientes/cliente-view";
 	}
 	
-	@RequestMapping("modulos/cliente/cliente-edit.html")
+	@RequestMapping("modulos/clientes/cliente-edit.html")
 	public String cliente_edit() {
 		System.out.println("CLIENTE EDIT");
-		return "modulos/cliente/cliente-edit";
+		return "modulos/clientes/cliente-edit";
 	}
 	
-	@RequestMapping("modulos/cliente/_form.html")
+	@RequestMapping("modulos/clientes/_form.html")
 	public String cliente_form() {
 		System.out.println("CLIENTE FORM eee");
-		return "modulos/cliente/_form";
+		return "modulos/clientes/_form";
 	}	
 	
 }

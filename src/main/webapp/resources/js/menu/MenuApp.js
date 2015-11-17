@@ -6,23 +6,23 @@ var app=angular.module("app", ['ui.router', 'ngResource', 'ClienteaApp.service',
 app.config(function($stateProvider) {	
 	$stateProvider.state('clientes',{
 		url: '/clientes',
-		templateUrl: 'modulos/cliente.html',
+		templateUrl: 'modulos/clientes.html',
 		controller: 'ClienteListController'		
 	}).state('clientes.listCliente', {
 		url: '/clientes/clientes',
-		templateUrl: 'modulos/cliente/clientes.html',
+		templateUrl: 'modulos/clientes/clientes.html',
 		controller: 'ClienteListController'
 	}).state('clientes.viewCliente', {
 		url: '/clientes/:clieid/view',
-		templateUrl: 'modulos/cliente/cliente-view.html',
+		templateUrl: 'modulos/clientes/cliente-view.html',
 		controller: 'ClienteViewController'
 	}).state('clientes.newCliente', {
 		url: '/clientes/new',
-		templateUrl: 'modulos/cliente/cliente-add.html',
+		templateUrl: 'modulos/clientes/cliente-add.html',
 		controller: 'ClienteCreateController',
 	}).state('clientes.editCliente', {
 		url: '/clientes/:clieid/edit',
-		templateUrl: 'modulos/cliente/cliente-edit.html',
+		templateUrl: 'modulos/clientes/cliente-edit.html',
 		controller: 'ClienteUpdateController'
 	});
 });
