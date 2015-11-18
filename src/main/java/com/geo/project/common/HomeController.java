@@ -148,7 +148,6 @@ System.out.println("entre al principio");
 	
 	@RequestMapping("/modulos/clientes/clientes.html")
 	public String clientes() {
-		System.out.println("LIST CLIENTS");
 		return "modulos/clientes/cliente-list";
 	}	
 	
@@ -159,8 +158,12 @@ System.out.println("entre al principio");
 	
 	@RequestMapping("modulos/clientes/cliente-edit.html")
 	public String cliente_edit() {
-		System.out.println("CLIENTE EDIT");
 		return "modulos/clientes/cliente-edit";
+	}
+	
+	@RequestMapping("modulos/clientes/cliente-add.html")
+	public String cliente_add() {
+		return "modulos/clientes/cliente-add";
 	}
 	
 	@RequestMapping("modulos/clientes/_form.html")

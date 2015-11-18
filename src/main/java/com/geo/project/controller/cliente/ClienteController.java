@@ -22,7 +22,7 @@ public class ClienteController extends MyController {
 	@Autowired
 	private ClienteRepository clienteRepository;	
 	
-	@RequestMapping(value = "/create", method = RequestMethod.POST, consumes = {"application/json"})
+	@RequestMapping(value = "/clientes", method = RequestMethod.POST, consumes = {"application/json"})
 	@ResponseBody
 	public String insert(@RequestBody InvCliente cliente) {
 		System.out.println("CREATE"); 

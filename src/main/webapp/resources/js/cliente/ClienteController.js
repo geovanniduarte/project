@@ -22,7 +22,7 @@ clienteController.controller('ClienteViewController', function($scope, $statePar
 clienteController.controller('ClienteCreateController' , function($scope, $state, $stateParams, /*factory*/ Cliente) {
 	$scope.cliente = new Cliente();
 	$scope.addCliente = function() {
-		Cliente.$save(function() {
+		$scope.cliente.$save(function() {
 			$state.go('clientes')
 		});
 	}
