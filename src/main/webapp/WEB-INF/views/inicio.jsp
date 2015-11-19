@@ -13,9 +13,9 @@
   <script type="text/javascript" src="resources/js/lib/angular.min.js"></script>
   <script type="text/javascript" src="resources/js/menu/MenuApp.js"></script>
   <script type="text/javascript" src="resources/js/menu/MenuController.js"></script>  
-  <script type="text/javascript" src="resources/js/cliente/ClienteApp.js"></script>
-  <script type="text/javascript" src="resources/js/cliente/ClienteController.js"></script>
-  <script type="text/javascript" src="resources/js/cliente/ClienteService.js"></script>
+  <script type="text/javascript" src="resources/js/clientes/ClienteApp.js"></script>
+  <script type="text/javascript" src="resources/js/clientes/ClienteController.js"></script>
+  <script type="text/javascript" src="resources/js/clientes/ClienteService.js"></script>
   <script type="text/javascript" src="resources/js/lib/angular-ui-router.min.js"></script>
   <script type="text/javascript" src="resources/js/lib/angular-resource.min.js"></script>  
 </head>
@@ -30,7 +30,7 @@
 
       <ul class="nav navbar-nav navbar-right">
         <li><a ui-sref="clientes"><i class="fa fa-home"></i>Clientes</a></li>
-        <li><a href="#about"><i class="fa fa-shield"></i> About</a></li>
+        <li><a ui-sref="proyectos"><i class="fa fa-shield"></i>Proyectos</a></li>
         <li><a href="#contact"><i class="fa fa-comment"></i> Contact</a></li>
       </ul>
     </div>
