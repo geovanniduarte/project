@@ -172,4 +172,10 @@ System.out.println("entre al principio");
 		return "modulos/clientes/_form";
 	}	
 	
+	@RequestMapping("modulos/proyectos/proyectos.html")
+	public String proyectos() {
+		System.out.println("CLIENTE FORM eee");
+		return "modulos/proyectos/proyectos";
+	}	
+	
 }
