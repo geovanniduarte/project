@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.GenericTypeResolver;
 import org.springframework.transaction.annotation.Transactional;
 
+
 public class EntityRepositoryImpl<T extends Identificable<Long>> {
 	
 	@Autowired

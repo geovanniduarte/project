@@ -14,26 +14,28 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.geo.project.common.MyController;
 import com.geo.project.common.model.InvCliente;
 import com.geo.project.repository.cliente.ClienteRepository;
+import com.geo.project.service.cliente.ClienteService;
 
 @Controller
 @RequestMapping("/ws/clientes")
 public class ClienteController extends MyController {
 	
+		
 	@Autowired
-	private ClienteRepository clienteRepository;	
+	private ClienteService clienteService;
 	
 	@RequestMapping(value = "/clientes", method = RequestMethod.POST, consumes = {"application/json"})
 	@ResponseBody
 	public String insert(@RequestBody InvCliente cliente) {
 		System.out.println("CREATE"); 
-		long clientid = clienteRepository.insert(cliente);
+		long clientid = clienteService.insert(cliente);
 		return "" + clientid;
 	}	
 	
 	@RequestMapping(value = "/clientes", method = RequestMethod.GET)
 	@ResponseBody
 	public List<InvCliente> insert() {	
-		List<InvCliente> clientes = clienteRepository.findAll();
+		List<InvCliente> clientes = clienteService.findAll();
 		System.out.println("get clientes " + clientes);
 		return clientes;
 	}
@@ -41,14 +43,14 @@ public class ClienteController extends MyController {
 	@RequestMapping(value = "/clientes/{clieid}", method = RequestMethod.GET)
 	@ResponseBody
 	public InvCliente find(@PathVariable long clieid) {	
-		InvCliente cliente = clienteRepository.findById(clieid);
+		InvCliente cliente = clienteService.findById(clieid);
 		return cliente;
 	}
 	
 	@RequestMapping(value = "/clientes/{clieid}", method = RequestMethod.PUT)
 	@ResponseBody
 	public Long edit(@PathVariable long clieid, @RequestBody InvCliente cliente) {	
-		Long clienid = clienteRepository.insertUpdate(cliente);
+		Long clienid = clienteService.insertUpdate(cliente);
 		return clienid;
 	}
 	

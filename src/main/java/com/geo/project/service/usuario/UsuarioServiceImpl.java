@@ -26,12 +26,14 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 
+import com.geo.project.common.EntityServiceImpl;
+import com.geo.project.common.model.InvCliente;
 import com.geo.project.common.model.PyrUsuario;
 import com.geo.project.common.model.PyrUsuarole;
 import com.geo.project.repository.usuario.UsuarioRepository;
 
 @Service
-public class UsuarioServiceImpl implements UserDetailsService, UsuarioService {
+public class UsuarioServiceImpl extends EntityServiceImpl<PyrUsuario> implements UserDetailsService, UsuarioService {
 	
 	@Autowired
 	private UsuarioRepository usuarioRepository;
@@ -68,70 +70,6 @@ public class UsuarioServiceImpl implements UserDetailsService, UsuarioService {
 		return Result;
 	}
 
-
-	public UsuarioRepository getUsuarioRepository() {
-		return usuarioRepository;
-	}
-
-
-	public void setUsuarioRepository(UsuarioRepository usuarioRepository) {
-		this.usuarioRepository = usuarioRepository;
-	}
-
-	@Override
-	@Transactional
-	public Long insert(PyrUsuario PyrUsuario) {
-		long usuaid = usuarioRepository.insert(PyrUsuario);		
-		return usuaid;
-	}
-
-
-	@Override
-	public void update(PyrUsuario PyrUsuario) {
-		// TODO Auto-generated method stub
-		
-	}
-
-
-	@Override
-	public void delete(PyrUsuario PyrUsuario) {
-		// TODO Auto-generated method stub
-		
-	}
-
-
-	@Override
-	public Long count() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-
-	@Override
-	public List<PyrUsuario> findAll() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-
-	@Override
-	public List<PyrUsuario> find(PyrUsuario PyrUsuario) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-
-	@Override
-	public PyrUsuario findById(Long usuaid) {
-		return usuarioRepository.findById(usuaid);
-	}
-
-
-	@Override
-	public Long insertUpdate(PyrUsuario PyrUsuario) {
-		long usuaid = usuarioRepository.insertUpdate(PyrUsuario);		
-		return usuaid;
-	}
 	
 	/**
 	 * Obtiene el codigo de google de un usuario.

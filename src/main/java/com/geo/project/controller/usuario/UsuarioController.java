@@ -30,9 +30,12 @@ public class UsuarioController extends MyController {
 	@ResponseBody
 	@ResponseStatus(HttpStatus.CREATED)
 	public HttpEntity<String> createPregunta(@RequestBody PyrUsuario newUsuario,
-			@Value("#{request.requestURL}") StringBuffer url) {		
-		System.out.println("createPregunta");
+			@Value("#{request.requestURL}") StringBuffer url) {	
 		long preguntaId = usuarioService.insert(newUsuario);
 		return entityWithLocation(url, (int) preguntaId);
 	}
+	
+	
+	
+	
 }
