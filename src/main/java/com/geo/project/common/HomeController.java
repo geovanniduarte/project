@@ -178,4 +178,9 @@ System.out.println("entre al principio");
 		return "modulos/proyectos/proyectos";
 	}	
 	
+	@RequestMapping("modulos/usuarios/usuarios.html")
+	public String usuarios() {
+		System.out.println("USUARIIOS");
+		return "modulos/usuarios/usuarios";
+	}	
 }

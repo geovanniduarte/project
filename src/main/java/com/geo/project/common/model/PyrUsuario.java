@@ -14,6 +14,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.TableGenerator;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.geo.project.common.Identificable;
 
 @Entity
@@ -44,6 +45,7 @@ public class PyrUsuario implements Identificable<Long> {
 	@Column(name="usuac2dm")
 	private String usuac2dm;
 	
+	@JsonIgnore
 	@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY )
 	@JoinColumn(name="usrousua")
 	private List<PyrUsuarole> roles; 

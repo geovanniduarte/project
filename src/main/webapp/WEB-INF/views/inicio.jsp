@@ -16,6 +16,11 @@
   <script type="text/javascript" src="resources/js/clientes/ClienteApp.js"></script>
   <script type="text/javascript" src="resources/js/clientes/ClienteController.js"></script>
   <script type="text/javascript" src="resources/js/clientes/ClienteService.js"></script>
+  
+  <script type="text/javascript" src="resources/js/usuarios/UsuarioController.js"></script>
+  
+  <script type="text/javascript" src="resources/js/proyectos/ProyectoController.js"></script>
+  
   <script type="text/javascript" src="resources/js/lib/angular-ui-router.min.js"></script>
   <script type="text/javascript" src="resources/js/lib/angular-resource.min.js"></script>  
 </head>
@@ -31,7 +36,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a ui-sref="clientes"><i class="fa fa-home"></i>Clientes</a></li>
         <li><a ui-sref="proyectos"><i class="fa fa-shield"></i>Proyectos</a></li>
-        <li><a href="#contact"><i class="fa fa-comment"></i> Contact</a></li>
+        <li><a ui-sref="usuarios"><i class="fa fa-comment"></i> Usuarios</a></li>
       </ul>
     </div>
   </nav>

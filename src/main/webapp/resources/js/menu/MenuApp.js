@@ -1,7 +1,7 @@
 /**
  * 
  */
-var app=angular.module("app", ['ui.router', 'ngResource', 'ClienteaApp.service', 'ClienteApp.controller']);
+var app=angular.module("app", ['ui.router', 'ngResource', 'ClienteaApp.service', 'ClienteApp.controller', 'ProyectoApp.controller', 'UsuarioApp.controller']);
 
 app.config(function($stateProvider) {	
 	$stateProvider.state('clientes', {
@@ -30,5 +30,11 @@ app.config(function($stateProvider) {
 		url:'/proyectos',
 		templateUrl: 'modulos/proyectos/proyectos.html',
 		controller: 'ProyectoListController'
+	});
+	
+	$stateProvider.state('usuarios', {
+		url:'/proyectos',
+		templateUrl: 'modulos/usuarios/usuarios.html',
+		controller: 'UsuarioListController'
 	});
 });

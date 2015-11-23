@@ -1,7 +1,7 @@
 /**
  * 
  */
-var proyectoController  = angular.module('ProyectoController',[]);
+var proyectoController  = angular.module('ProyectoApp.controller',[]);
 	proyectoController.controller('ProyectoListController', function($scope, $state, $window, $log) {
 	$scope.whatClassIsIt= function(column) {
     	var log = [];
