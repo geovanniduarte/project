@@ -6,23 +6,24 @@
   <!-- SCROLLS -->
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
-
+  <link rel="stylesheet" href="http://ui-grid.info/release/ui-grid.css" type="text/css">
   <!-- SPELLS --> 
- 
-  
+    
   <script type="text/javascript" src="resources/js/lib/angular.min.js"></script>
-  <script type="text/javascript" src="resources/js/menu/MenuApp.js"></script>
-  <script type="text/javascript" src="resources/js/menu/MenuController.js"></script>  
+  <script src="http://ui-grid.info/release/ui-grid.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-touch.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-animate.js"></script>
+   
+  <script type="text/javascript" src="resources/js/menu/MenuApp.js"></script>  
   <script type="text/javascript" src="resources/js/clientes/ClienteApp.js"></script>
   <script type="text/javascript" src="resources/js/clientes/ClienteController.js"></script>
-  <script type="text/javascript" src="resources/js/clientes/ClienteService.js"></script>
-  
+  <script type="text/javascript" src="resources/js/clientes/ClienteService.js"></script>  
   <script type="text/javascript" src="resources/js/usuarios/UsuarioController.js"></script>
-  
-  <script type="text/javascript" src="resources/js/proyectos/ProyectoController.js"></script>
-  
+  <script type="text/javascript" src="resources/js/usuarios/UsuarioService.js"></script>  
+  <script type="text/javascript" src="resources/js/proyectos/ProyectoController.js"></script>  
   <script type="text/javascript" src="resources/js/lib/angular-ui-router.min.js"></script>
-  <script type="text/javascript" src="resources/js/lib/angular-resource.min.js"></script>  
+  <script type="text/javascript" src="resources/js/lib/angular-resource.min.js"></script>
+  <script type="text/javascript" src="resources/js/common/FrmDirectiveGrid.js"></script>  
 </head>
 
 <!-- define angular controller -->

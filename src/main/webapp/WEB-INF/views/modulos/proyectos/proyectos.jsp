@@ -8,6 +8,6 @@
 </head>
 <body>
 <h1>proyects</h1>
-	<custom-grid cols="columnDefs" selected-items="selectedItems" custom-options="gridOptions" evento="gridEvento" data-ng-if="directiveGrid"></custom-grid>
+	<div ui-grid="gridOptions" class="grid"> </div>
 </body>
 </html>

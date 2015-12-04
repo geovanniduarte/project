@@ -1,4 +1,4 @@
-FrmMainApp.directive('customGrid', function($compile) {
+app.directive('customGrid', function($compile) {
 
 	  return {
 	    restrict: 'E',

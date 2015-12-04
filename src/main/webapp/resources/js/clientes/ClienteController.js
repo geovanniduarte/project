@@ -1,7 +1,6 @@
 /**
  * 
  */
-
 var clienteController = angular.module('ClienteApp.controller', []);
 
 clienteController.controller('ClienteListController', function($scope, $state, $window, $log, /*factory*/ Cliente) {

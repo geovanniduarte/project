@@ -7,7 +7,7 @@
 <title>Usuarios</title>
 </head>
 <body>
-<h1>proyects</h1>
-	<div class="gridStyle" ng-grid="gridOptions"></div>
+<h1>Usuarios</h1>
+	<div class="gridStyle" ui-grid="gridOptions"></div>
 </body>
 </html>
