@@ -18,5 +18,4 @@ usuarioController.controller('UsuarioListController', ['$scope', '$stateParams',
 			}	
 	}	
 	$scope.gridOptions.data = Usuario.query();
-	alert('usuario: ' + $scope.gridOptions.data);
 	}]);
